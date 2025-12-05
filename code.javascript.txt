@@ -1,0 +1,14 @@
+// Simple form submission handler (logs to console; replace with real backend if needed)
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // In a real site, send this to a server (e.g., via email API)
+    console.log('Form submitted:', { name, email, message });
+    alert('Thank you for your message! We will get back to you soon.');
+    
+    // Clear form
+    this.reset();
+});
